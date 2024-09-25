@@ -8,17 +8,49 @@ body {
 header {
     background-color: #f6f8fa;
     border-bottom: 1px solid #d1d9e0;
+    padding: 30px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search {
+    border-bottom: 1px solid #d1d9e0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search__input {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.search__input:focus {
+    outline-color: #0969da;
 }
 
 .repo__list {
     list-style-type:  none;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 
 .repo__item {
     margin-top: 24px;
     padding-bottom: 24px;
-    margin-right: 40px; 
     border-bottom: 1px solid #d1d9e0;
+    width: 100%;
 }
 
 .repo__link {
@@ -37,18 +69,4 @@ span {
     padding-right: 20px;
 }
 
-.search {
-    border-bottom: 1px solid #d1d9e0;
-    margin-left: 40px;
-    margin-right: 40px; 
-}
 
-.search__input {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 30px;
-}
-
-.search__input:focus {
-    outline-color: #0969da;
-}
