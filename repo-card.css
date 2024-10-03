@@ -82,9 +82,8 @@ header {
     background-color: #f0f8ff; 
 }
 
-.repo__item:hover, 
 .repo__item:hover + .repo__item {
-    border-color: #0969da; /* Подсвечивает нижнюю и верхнюю границу текущего и следующего элемента */
+    border-color: #0969da; /* Подсвечивает ниж и верх границу текущ и след эл-та */
 }
 
 .repo__name {
