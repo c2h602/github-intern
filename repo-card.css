@@ -30,24 +30,29 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    border-bottom: 1px solid #d1d9e0;
 }
 
 .search__input {
     width: 100%; 
+    max-width: 80vw;
     height: 30px;
     margin-top: 2.5rem;  /* 40px;  */
-    margin-bottom: 1.25rem; /* 20px; */
+    margin-bottom: 1.5rem; /* 20px; */
     padding: 0.3125rem 0.625rem; /* 5px 10px; */
     border-style:solid;
     border-color: #d1d9e0;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 0.875rem; /* 14px; */
+    transition: border-color 0.3s ease;
 }
 
 .search__input:focus {
     outline-color: #0969da;
+}
+
+.search__input:hover {
+    border-color: #0969da;
 }
 
 .repo {
@@ -64,10 +69,9 @@ header {
 }
 
 .repo__item {
-    margin-top: 1.5rem; /* 24px; */ 
-    padding: auto;
     padding-bottom: 1.5rem; /* 24px; */ 
-    border-bottom: 1px solid #d1d9e0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d1d9e0;
     width: 100%;
     box-sizing: border-box;
     transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -78,7 +82,13 @@ header {
     background-color: #f0f8ff; 
 }
 
+.repo__item:hover, 
+.repo__item:hover + .repo__item {
+    border-color: #0969da; /* Подсвечивает нижнюю и верхнюю границу текущего и следующего элемента */
+}
+
 .repo__name {
+    margin-top: 1.5rem;
     font-size: 1.25rem; /* 20px; */
     font-weight: bold;
     color: #0969da;
@@ -135,6 +145,11 @@ header {
     .container {
         max-width: 75rem; /* 1200px */
         padding: 2.5rem; /* 40px */
+    }
+
+    .search__input {
+        max-width: 75rem; /* 1200px */
+        height: 40px;
     }
 
     .repo {
