@@ -39,7 +39,7 @@ header {
     margin-top: 2.5rem;  /* 40px;  */
     margin-bottom: 1.5rem; /* 20px; */
     padding: 0.3125rem 0.625rem; /* 5px 10px; */
-    border-style:solid;
+    border-style: solid;
     border-color: #d1d9e0;
     border-radius: 4px;
     box-sizing: border-box;
@@ -53,6 +53,26 @@ header {
 
 .search__input:hover {
     border-color: #0969da;
+}
+
+button {
+    background-color: #29a04b;
+    color: white;
+    font-size: 0.875rem;
+    margin-left: 8px;
+    cursor: pointer;
+    box-shadow: none;
+    border: 1px solid;
+    border-radius: 6px;
+    height: 40px;
+    margin-top: 2.5rem;  /* 40px;  */
+    margin-bottom: 1.5rem; /* 20px; */
+    padding: 0px 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #228d41;
 }
 
 .repo {
@@ -86,7 +106,7 @@ header {
     border-color: #0969da; /* Подсвечивает ниж и верх границу текущ и след эл-та */
 }
 
-.repo__name {
+.repo__username {
     margin-top: 1.5rem;
     font-size: 1.25rem; /* 20px; */
     font-weight: bold;
@@ -94,19 +114,8 @@ header {
     text-decoration: none;
 }
 
-.repo__name:hover {
+.repo__username:hover {
     text-decoration: underline;
-}
-
-.repo__description {
-    font-size: 1rem; /* 16px; */
-}
-
-.repo__programming-language,
-.repo__date {
-    font-size: 0.875rem; /* 14px */
-    color: #57606a;
-    margin-right: 0.625rem; /* 10px; */
 }
 
 
@@ -116,26 +125,22 @@ header {
         padding: 1.25rem; /* 20px */
     }
 
-    .search__input {
+    .search__input,
+    button {
         margin-top: 1.5rem;
         margin-bottom: 1.25rem;
+    }
+
+    button {
+        height: 30px;
     }
 
     .repo__item {
         padding-bottom: 1.25rem;
     }
 
-    .repo__name {
+    .repo__username {
         font-size: 1.125rem; /* 18px */
-    }
-
-    .repo__description {
-        font-size: 0.875rem; /* 14px */
-    }
-
-    .repo__programming-language,
-    .repo__date {
-        font-size: 0.75rem; /* 12px */
     }
 }
 
@@ -155,7 +160,7 @@ header {
         max-width: 75rem; /* 1200px */
     }
 
-    .repo__name {
+    .repo__username {
         font-size: 1.375rem; /* 22px */
     }
 }
